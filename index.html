@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+
+</head>
+
+<body>
+
+	<header>
+		<div class="container-inline row">		
+			<div class="logo-header">
+				<img class="img-responsive" src="img/logo-header.png" alt="" width="177" height="28">
+			</div>
+			<div class="nav hidden-sm hidden-xs">
+				<ul>
+					<li><a href="#welcome">About Russia</a></li>
+					<li><a href="#tour">Itinerary</a></li>
+					<li><a href="#map">Map</a></li>
+					<li><a href="#accommodation">Accomodation</a></li>
+					<li><a href="#obtaining">Visa</a></li>
+					<li><a href="#booking">Booking</a></li>
+					<li><a href="#price">Price</a></li>
+					<li><a href="#payments">Contacts</a></li>
+				</ul>
+			</div>
+			<img class="btn-click hidden-lg hidden-md" src="img/icon-mobile.png" alt="" width="62" height="43">
+			<div class="burger-menu">
+				<ul>
+					<li><a href="#welcome">About Russia</a></li>
+					<li><a href="#tour">Itinerary</a></li>
+					<li><a href="#map">Map</a></li>
+					<li><a href="#accommodation">Accomodation</a></li>
+					<li><a href="#obtaining">Visa</a></li>
+					<li><a href="#booking">Booking</a></li>
+					<li><a href="#price">Price</a></li>
+					<li><a href="#payments">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="phone hidden-xs">
+				<p>+7 960-56-24-17</p>
+			</div>
+		</div>
+	</header>
+	<section class="main">
+		<div class="container-inline">
+			<div class="main__logo--label">
+				<img class="img-responsive" src="img/logo-label.png" alt="" width="130" height="71">
+			</div>
+			<h1>Fascinating Russia<br>
+			— Tel Aviv University 2016</h1>
+			<a href="#tour">Main Tour in Moscow, September 22 — 25</a><br>
+			<a href="#optional-peterburg">Optional Pre Tour — St.Petersburg, September 17 — 20</a><br>
+			<a href="#optional-peter-mosc">Optional Pre Tour — Moscow, September 20 — 21</a>
+		</div>
+	</section>
+	<section class="welcome" id="welcome">
+		<div class="container-inline">
+			<h2>Welcome to Russia</h2>
+			<h3>Russia is at once breathtakingand baffling... where the ruling party 
+			downwards functions in its own, impenetrably Russian, way.</h3>
+			<div class="welcome__blocks clearfix">
+				<div class="welcome__blocks__block">
+					<p class="first--letter">Russia is a country that was unreachable for many years behind a shroud of secrets and memory. Since the collapse of the Iron Curtain, Russia has opened its doors. It is now a welcoming place eager to connect with foreigners and share its unique heritage with those who visit.</p>
+					<p>One-seventh of the world’s landmass, Russia is the largest country on earth. In fact, by jet from Moscow, it takes about eight hours to reach Vladivostok on the Pacific Ocean coast. This expansive area allows it to hold a vast and complicated array of landscapes with a diverse blend of forty national parks and forty UNESCO Biosphere Reserves.</p>
+					<p>Russia is at once breathtaking and baffling. Monumental in every respect, it’s a land where burnished imperial splendor coexists with icy Siberian tundra, where timeworn Soviet-era monuments backdrop uber-hip urban cultures and where everything from the ruling party downwards functions in its own, impenetrably Russian, way.</p>
+					<p>Russia has made a priceless contribution to the world culture. It has given to the world not only great classics and fine arts masterpieces but entire schools. Russian drama school of Stanislavski is world-famous, and Russian ballet, its rich traditions and famous names of the ballet dancers are the most important cultural symbols of Russia.</p>
+				</div>
+				<div class="welcome__blocks__block">
+					<p>The west of the country draws the most visitor attention, thanks to the presence of two extraordinary cities. St Petersburg and Moscow serve up sweeping postcard sights by the dozen. Moscow is the rapidly beating heart of the “New Russia,” where Asia and Europe combine to create a boisterous, enigmatic metropolis on a grand scale. St Petersburg, meanwhile, with its living film-set of palaces, cathedrals and waterways, is the grandest and most European of Russia’s cities, yet still retains a deeply complex character.</p>
+					<p>You’ve probably heard a lot of “facts”, myths and stereotypes about Russia. So: is it true that Russians drink vodka like it’s going out of fashion? Is it really cold here? And if you go to Russia, should you watch out for bears? The only way to find out which Russian “stereotypes” are actually true is to come to Russia! By all means, you will be doubly rewarded by the cultural riches of the country and the warmth of the Russian people.</p>
+				</div>
+			</div>
+		</div>
+		<div class="welcome__background">
+			<h3>High culture... jaw-dropping art exhibitions and an energetic live music scene continue to prove that Moscow is really on the cutting edge.</h3>
+		</div>
+		<div class="container-inline">
+			<div class="welcome__blocks clearfix">
+				<div class="welcome__blocks__block">
+					<p class="first--letter">Moscow is the huge, historic, versatile, chaotic and beautiful capital of our country. A city of contrasts, Moscow’s busy streets all bear witness to Russia’s turbulent history and dynamic future.</p>
+					<p>From the medieval Kremlin, it is a fortified complex at the heart of Moscow, overlooking the Moskva River to the south, Saint Basil’s Cathedral and Red Square to the east, and the Alexander Garden to the west. The magical golden domes of Moscow’s beautiful churches, to its tranquil parks, monumental Soviet architecture and modern skyscrapers, the city’s skyline tells a thousand stories.</p>
+					<p>
+					High culture courtesy of the Moscow Philharmonic and the Bolshoi Theatre, jaw-dropping art exhibitions and an energetic live music scene continue to prove that Moscow is really on the cutting edge. Whether you are looking for medieval history, communist nostalgia or high-rolling glamour, Moscow has something for everyone.</p>
+					<p>It’s said that if Moscow is Russia is head, St Petersburg is its heart. For 300 years this has been the country’s cultural capital, producing authors, poets, painters and playwrights.</p>
+					<p>It remains a bustling hub for the arts, showcasing everything from painting and literature to street theatre and rebel rock. The historic heart of this timeless, romantic city is </p>
+				</div>
+				<div class="welcome__blocks__block">
+					<p>It remains a bustling hub for the arts, showcasing everything from painting and literature to street theatre and rebel rock. The historic heart of this timeless, romantic city is focused on the crescent of land bound by the Neva and Fontanki Rivers. Here you will find the Admiralty, the Hermitage and Dvortsovaya Ploshchad (Palace Square), as well as Nevsky Prospekt, St Petersburg’s most elegant avenue. Focal points include the Mariinsky Theatre, west of the Admiralty, home to the famous Kirov ballet company.</p>
+					<p>North across the river are Vasilyevsky Island, with its universities and museums, and Petrogradskaya Storona, home to the Peter and Paul Fortress and even more famous museums. The Hermitage, the world’s largest art museum, founded by Catherine the Great in 1764. Today the collection of the State Hermitage includes more than three million works of art and artefacts of the world culture.</p>
+					<p>Fans are in for a memorable time, particularly as it will coincide with the city’s famed “White Nights” season, when the sun barely sets from mid-June to early July.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="map container-inline" id="map">
+		<h2>Your Journey Map</h2>
+		<div class="logo-map">
+			<img class="img-responsive" src="img/logo-map.png" alt="" width="888" height="538">
+			<a class="peterburg" href="#peter--sights">St. Petersberg</a>
+			<a class="moscow" href="#msc--sights">Moscow</a>
+			<a class="suzdal" href="#szd--sights">Suzdal</a>
+		</div>
+	</section>
+	<section class="tour" id="tour">
+		<div class="container-inline clearfix">
+			<h2>Main Tour</h2>
+			<h3>September 22 - 25</h3>
+			<a href="">Moscow, Four Seasons</a>
+			<p>VIP pick up from airport to hotel upon arrival</p>
+			<div class="tour_shedule clearfix">
+				<div class="shedule__days ">
+					<div class="shedule__day">
+						<h3>September, <span>22</span></h3>
+						<p>Thursday</p>
+						<span>Moscow</span><br>
+						<span>Four Seasons</span>
+					</div>
+					<div class="shedule__next--day">
+						<p>September, <span>23</span></p>
+						<span>Friday</span>
+					</div>
+					<div class="shedule__next--day">
+						<p>September, <span>24</span></p>
+						<span>Saturday</span>
+					</div>
+					<div class="shedule__next--day active--day">
+						<p>September, <span>25</span></p>
+						<span>Sunday</span>
+					</div>
+				</div>
+				<div class="shedule__developments">
+					<p><b>ARRIVAL:</b></p>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>08:00–09:00</p>
+						</div>
+						<div class="day_description">
+							<p>Breakfast at hotel</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>09:00–11:30</p>
+						</div>
+						<div class="day_description">
+							<p>Fascinating <a href="">Moscow city tour</a> that will leave you inspired. During the tour you will appreciate the elements of a big city which integrates ancient monuments with state-of-the-art modern	architecture. You will experience the main sights of Moscow.</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>12:00–13:00</p>
+						</div>
+						<div class="day_description">
+							<p>Meeting with <a href="">His Holiness the Patriarch of Moscow and all Russia Kirill</a> at Danilov Monastery or Cathedral of Christ the Saviour</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>13:30–14:30</p>
+						</div>
+						<div class="day_description">
+							<p>Lunch</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>15:00–16:30</p>
+						</div>
+						<div class="day_description">
+							<p>Visit the <a href="">Garage Museum of Contemporary Art</a> and meet with its founder, Daria Zhukova</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>17:00–18:00</p>
+						</div>
+						<div class="day_description">
+							<p>A closer look at the last three centuries — Antic Shop and Gallery visit</p>
+						</div>
+					</div>
+					<div class="developments__day clearfix">
+						<div class="day__time">
+							<p>20:00</p>
+						</div>
+						<div class="day_description">
+							<p>Gala Dinner hosted by <a href="">Dr. Boris Mints</a> at the Museum of Russian Impressionist Art Musical Interlude by students of <a href="">The Vladimir Spivakov International Charity Foundation</a></p>
+						</div>
+					</div>							
+					<div class="next--day">
+						<a href="">Next day</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="optional--peterburg container-inline" id="optional-peterburg">
+		<h2>Optional Pre–Tour St.Petersbug</h2>
+		<h3>September 17 - 19</h3>
+		<a class="optinal--margin" href="">St. Petersberg, Four Seasons Lion Palace</a>
+		<div class="tour_shedule clearfix">
+			<div class="shedule__days">
+				<div class="shedule__day">
+					<h3>September, <span>17</span></h3>
+					<p>Saturday</p>
+					<span>St. Petersberg</span><br>
+					<span>Four Seasons Lion Palace</span>
+				</div>
+				<div class="shedule__next--day">
+					<p>September, <span>18</span></p>
+					<span>Sunday</span>
+				</div>
+				<div class="shedule__next--day active--day">
+					<p>September, <span>19</span></p>
+					<span>Monday</span>
+				</div>
+			</div>
+			<div class="shedule__developments">
+				<p><b>ADDITIONAL DAY TRIP (OPTIONAL)</b></p>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>All day</p>
+					</div>
+					<div class="day_description">
+						<p>Arrival and transfer to the hotel</p>
+						<p>Check-in to your luxury hotel (upgrades available)
+						<a href="http://www.fourseasons.com/stpetersburg/accommodations/?c=t&_s_icmp=mmenu">www.fourseasons.com/stpetersburg/accommodations/?c=t&_s_icmp=mmenu</a></p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>19:00–22:00</p>
+					</div>
+					<div class="day_description">
+						<p>Welcome dinner</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>01:00–01:45 </p>
+					</div>
+					<div class="day_description">
+						<p>(Optional) St. Petersburg was built on the delta of the River Neva and is spread out over numerous islands of varying sizes, frequently prompting the nickname the “City of 101 Islands”. Over the centuries numerous bridges were built to connect these islands across the various tributaries of the Neva and the city’s many canals (Moika, Fontanka, Kanal Griboedova, etc.). You will have a unique chance to see a bridge opening.</p>
+					</div>
+				</div>
+				<div class="next--day">
+					<a href="">Next day</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="peterburg--sights" id="peter--sights">
+		<div class="container-inline">
+			<h2>St.Petersburg Sights</h2>
+			<ul class="nav--sights">
+				<li><a href=""><span>02/07</span><br>St Petersburg Grand Choral Synagogue</a></li>
+				<li><a href=""><span>03/07</span><br>St Petersburg Faberge Museum</a></li>
+				<li><a href=""><span>04/07</span><br>St. Isaac’s Cathedral</a></li>
+				<li><a href=""><span>05/07</span><br>The State Hermitage Museum</a></li>
+				<li><a href=""><span>06/07</span><br>Peterhof park and Palace</a></li>
+				<li><a href=""><span>07/07</span><br>The Tsarskoye Selo. St. Petersburg</a></li>
+			</ul>
+		</div>
+		<div class="main--sights clearfix">
+			<div class="img--sights">
+				<img class="img-responsive" src="img/img-StPeterburg.jpg" alt="" width="959" height="542">
+			</div>
+			<div class="text--sights">
+				<span>01/07</span>
+				<h3>Peter and Paul Fortress</h3>
+				<p>Lacking the fame and tourist awareness of the Hermitage or the Mariinsky Theatre, the Peter and Paul Fortress is certainly no less of a St. Petersburg landmark.</p>	
+				<p>The first structure to be built in St. Petersburg, and thus the birthplace of the city, it never served its intended defensive function. Instead it has had a rich, hugely varied, and sometimes sinister history as a military base, as a home of government departments, the burial ground of the Russian Imperial family, the site of groundbreaking scientific experiments and a forbidding jail that held some of Russia’s most prominent political prisoners. Today, the Peter and Paul Fortress is for the
+				most part under the auspices of the St. Petersburg Museum of History, with a number of permanent and temporary exhibitions charting the various aspects of the compound’s past. The Peter and Paul Fortress is also the centre of a number of St. Petersburg urban traditions, among them the daily firing of the cannon from the Naryshkin Bastion at noon and the “walruses” who use the beach in front of the fortress to sunbathe and swim in ice-holes in the winter.</p>		
+			</div>
+			<div class="prev--sights">
+				<a href="">Previous sight</a>
+			</div>
+			<div class="next--sights">
+				<a href="">Next sight</a>
+			</div>
+		</div>
+	</section>
+	<section class="optional--peterburg--moscow container-inline" id="optional-peter-mosc">
+		<h2>Optional Pre–Tour St.Petersbug and Moscow</h2>
+		<h3>September 20 - 21</h3>
+			<a href="">St. Petersberg, Four Seasons Lion Palace</a><br>
+			<a href="">Moscow, Four Seasons</a>
+			<p class="size-p">For those guests who prefer to arrive in Moscow on Tuesday, 20th September, our guides will meet you at the arrival hall of the airport throughout the day</p>
+		<div class="tour_shedule clearfix">
+			<div class="shedule__days">
+				<div class="shedule__day">
+					<h3>September, <span>20</span></h3>
+					<p>Tuesday</p>
+					<div class="peterburg--hotels">
+						<span>St. Petersberg</span><br>
+						<span class="margin-span">Four Seasons Lion Palace</span>
+					</div>
+					<div class="moscow--hotels">
+						<span>Moscow</span><br>
+						<span>Four Seasons</span>
+					</div>
+				</div>
+				<div class="shedule__next--day active--day">
+					<p>September, 21</p>
+					<span>Wednesday</span>
+				</div>
+			</div>
+			<div class="shedule__developments">
+				<p><b>ADDITIONAL DAY TRIP (OPTIONAL)</b></p>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>08:30–09:30 </p>
+					</div>
+					<div class="day_description">
+						<p>Breakfast at hotel</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>10:00–10:30</p>
+					</div>
+					<div class="day_description">
+						<p>Enjoy a boat ride along the <a href="">Peterhof Park and Palace</a></p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>10:30–13:30</p>
+					</div>
+					<div class="day_description">
+						<p>Visit the <a href="">Peterhof Park and Palace</a></p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>12:30–13:30 </p>
+					</div>
+					<div class="day_description">
+						<p>Lunch</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>13:30–14:30</p>
+					</div>
+					<div class="day_description">
+						<p>Transfer to the Moskovsky railway station</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>15:00</p>
+					</div>
+					<div class="day_description">
+						<p>Departure for Moscow by high-speed Sapsan train</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>19:00</p>
+					</div>
+					<div class="day_description">
+						<p>Arrival at Leningradsky railway station</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>20:00–21:00</p>
+					</div>
+					<div class="day_description">
+						<p>Check-in to your luxury Four Seasons hotel (upgrades available)<br>
+						<a href="">www.fourseasons.com/moscow/accommodations/?c=t&_s_icmp=mmenu</a></p><br>
+						<p><b>ARRIVAL:</b></p>
+						<p>Options for your day’s activities are:</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>15:30–17:00 </p>
+					</div>
+					<div class="day_description">
+						<p>Fascinating tour of the Kremlin</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>18:00–20:00</p>
+					</div>
+					<div class="day_description">
+						<p>Walking tour across Red Square including St. Basil’s Cathedral, Alexander Gardens</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>21:00–22:00</p>
+					</div>
+					<div class="day_description">
+						<p>Light dinner @ Dr. Zhivago <a href="">www.drzhivago.ru/en/</a> - for all guests</p>
+					</div>
+				</div>
+				<div class="developments__day clearfix">
+					<div class="day__time">
+						<p>23:00-00:00</p>
+					</div>
+					<div class="day_description">
+						<p>Night tour of the Metro</p>
+					</div>
+				</div>
+				<div class="next--day">
+					<a href="">Next day</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="moscow--sights" id="msc--sights">
+		<div class="container-inline">
+			<h2>Moscow Sights</h2>
+			<ul class="nav--sights">
+				<li><a href=""><span>02/14</span><br>Moscow Metro</a></li>
+				<li><a href=""><span>03/14</span><br>Art</a></li>
+				<li><a href=""><span>04/14</span><br>The Tretyakov Gallery on Krymsky Val</a></li>
+				<li><a href=""><span>05/14</span><br>Muzeon Park of Arts</a></li>
+				<li><a href=""><span>06/14</span><br>Russian Sanduny Bath Rooms</a></li>
+				<li><a href=""><span>07/14</span><br>Museum of Russian Impressionist Art</a></li>
+				<li><a href=""><span>08/14</span><br>The Jewish Museum and Centre of Tolerance</a></li>
+				<li><a href=""><span>09/14</span><br>Moscow Choral Synagogue</a></li>
+				<li><a href=""><span>10/14</span><br>Pushkin Museum of Fine Arts</a></li>
+				<li><a href=""><span>11/14</span><br>The Bolshoi Theatre</a></li>
+				<li><a href=""><span>12/14</span><br>Saint Basil’s Cathedral</a></li>
+				<li><a href=""><span>13/14</span><br>Garage Museum of Contemporary Art</a></li>
+				<li><a href=""><span>14/14</span><br>VDNKh</a></li>
+			</ul>
+		</div>
+		<div class="main--sights main--sights--moscow clearfix">
+			<div class="img--sights">
+				<img class="img-responsive" src="img/img-moscow1.jpg" alt="">
+			</div>
+			<div class="text--sights">
+				<span>01/14</span>
+				<h3>The Kremlin</h3>
+				<p>A potent symbol of two mighty imperial cultures — that of medieval Muscovy and that of the Soviet Union — the Kremlin is at once fascinating and foreboding, a mixture of lavish opulence and austere secrecy, and its eclectic mix of architecture reflects these paradoxes and seismic cultural shifts.</p>	
+				<p>Inextricably linked to all the most important historical and political events in Russia since the 13th century, the Kremlin was the residence of the Great Prince and also a religious centre. Today, the Kremlin remains as alluring and enigmatic as ever. Two thirds of the citadel territory are closed to visitors, but the remaining third contains enough treasures to occupy several days of sightseeing. Not only is it one of the largest and most interesting museums in the world, it is also the official residence of the President of the Russian Federation. The Kremlin is the perfect place to begin your tour of Moscow.</p>			
+			</div>
+			<div class="prev--sights">
+					<a href="">Previous sight</a>
+			</div>
+			<div class="next--sights">
+					<a href="">Next sight</a>
+			</div>
+		</div>
+	</section>
+	<section class="suzdal--sights clearfix" id="szd--sights">
+		<div class="container-inline">
+			<h2>Suzdal</h2>
+		</div>
+		<div class="text--sights">
+			<p>Suzdal, a must-see if you can visit only one place outside of Moscow. If you have only one place to visit near Moscow. In 1864, local merchants failed to coerce the government into building the Trans-Siberian Railway through their town. Instead it went through Vladimir, 35km away. As a result Suzdal was bypassed not only by trains, but by the 20th century altogether. This is why the place remains the same as it did at the end of the 19th century — its cute wooden cottages mingling with golden cupolas that reflect the river, which meanders sleepily through gentle hills and flower-filled meadows.</p>	
+			<p>As it happens, Suzdal served as a royal capital when Moscow was a mere cluster of cowsheds. It transformed into a major monastic centre during the time of Ivan the Terrible (Ivan IV Vasilyevich) and became and important commercial hub later on. Nowadays, it seems perfectly content in its retirement from both business and politics.</p>	
+		</div>
+		<div class="img--sights">
+			<img src="img/img-Suzdal.jpg" alt="">
+		</div>
+	</section>
+	<section class="accommodation" id="accommodation">
+		<div class="container-inline">
+			<h2>Your Accommodation</h2>
+			<div class="hotel">
+				<h3>The Four Seasons Hotel Lion Palace St. Petersburg</h3>
+				<a href="" target="_blank">www.fourseasons.com/stpetersburg/</a>
+				<div class="hotel clearfix">
+					<div class="img--hotel">
+						<img class="img-responsive" src="img/img-hotel1.jpg" alt="">
+					</div>
+					<div class="text--hotel">
+						<p>The Four Seasons Hotel Lion Palace is a treasure of a luxury hotel in St. Petersberg situated in a 19th century royal Russian palace. It is located in the historic Admiralteysky district, just two blocks from the Hermitage Museum and close to Nevsky Prospekt and the Mariinsky Theatre. Its entry is guarded by two marble lions.</p>
+						<p>St. Petersburg’s premier five-star luxury hotel offers views of Saint Isaac’s Cathedral, Alexandrovsky Garden, and the landmark Admiralty. Two signature St. Petersburg restaurants create see-and-be-seen buzz, while a glass-topped spa helps you relax and rejuvenate. The beauty and history of Imperial Russia feel current and fashionable — coming to life with luxurious, at-your-service Four Seasons care.</p>
+						<p>The Hotel guest rooms feature classic design in soothing pastel colors, complemented by a full range of modern services and amenities. The bathroom amenities are by Lorenzo Villoresi in the guestrooms and Hermes in the suites.</p>
+						<p>Please contact Irina <a href="" target="_blank">irina@mauri-group.ru</a> for additional information.</p>
+					</div>
+				</div>
+			</div>
+			<div class="hotel">
+				<h3>The Four Seasons Hotel Moscow</h3>
+				<a href="" target="_blank">www.fourseasons.com/moscow/</a>
+				<div class="hotel clearfix">
+					<div class="img--hotel">
+						<img class="img-responsive" src="img/img-hotel2.jpg" alt="">
+					</div>
+					<div class="text--hotel">
+						<p>Introducing the new Four Seasons Hotel Moscow — in a landmark location adjacent to Red Square, with magical views of the Kremlin’s cathedral domes and spires. The design is a modern replica of the famous Hotel Moskva, originally built in the 1930s — now renewed as a luxury five star hotel, bringing warm and personalized service to the Russian capital.</p>
+						<p>The building faces beautiful Manezhnaya Square, adjacent to the entrance gates of Red Square – with the Kremlin on one side and the Duma on the other. Steps away, you will find the Bolshoi and Maly Theatres, GUM department store, as well as Moscow’s flourishing high-end shopping district.</p>
+						<p>Rooms and suites are located between the fourth and tenth floors. Relax amid luxurious Four Seasons decor — including elements of the 1930s Russian constructivist design of the original Hotel Moskva — in spaces that are bright, airy and contemporary. Modern bathrooms feature large panels of richly grained marble. Details include a double vanity, private water closet, separate shower and deep soaking bathtub.</p>
+						<p>Whether you’re travelling for work or pleasure, you are keeping fit is an essential part of your day. Take in an invigorating workout at our well-equipped, 198-square-metre (2,131-square-foot) Fitness Centre, accessible 24 hours upon guest request. Enjoy an energizing workout or a relaxing swim in our heated indoor pool, which is clad in sophisticated dark-blue mosaic tile. The glass roof overhead allows plenty of natural daylight and reveals an inspiring view of the sky.</p>
+						<p>Please contact Irina <a href="" target="_blank">irina@mauri-group.ru</a> for additional information.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="obtaining container-inline clearfix" id="obtaining">
+		<h2>Obtaining a Russian Visa</h2>
+		<h3>According to the Russia - Israel bilateral agreement, citizens of the State of Israel do not need visas to travel to Russia for a period of up to 90 days unless the purpose of their visit is employment, education or commercial activity.</h3>
+		<div class="obtaining__text">
+			<p class="first--letter">
+				Nearly all foreigners are required to obtain a visa before entering Russia. Mauri recommends you apply for your visa one month before your departure to avoid any unforeseen complications. There are two options for securing your visa.
+			</p>
+			<ul>
+				<li>Use a Russian Visa Centre in your country (if one exists)</li>
+			</ul>
+			<p class="italic--text">Details of the application process vary depending on where you apply and what kind of visa you need. Nevertheless, you will need the following for all visas:</p>
+			<p>
+				<b>Passport</b> Valid for at least six months beyond your return date.<br>
+				<b>Photos One</b> or two passport-sized photos<br>
+				<b>Completed application form</b> Allow some time for this<br>
+				<b>Handling fee</b> Usually in the form of a money order; amount varies.<br>
+				<b>Visa-support letter</b> Provided by hotel, travel agent or online service.
+			</p>
+		</div>
+		<div class="obtaining__text">
+			<p>Please find all detailed information and the set of required documents at the following links or or check the relevant information for your own country:</p>
+			<ul>
+				<li>For USA citizens: <a href="http://www.ils-usa.com/" target="_about">www.ils-usa.com</a></li>
+				<li>For UK citizens: <a href="http://www.ru.vfsglobal.co.uk/" target="_about">www.ru.vfsglobal.co.uk</a></li>
+				<li>For Canadian citizens: <a href="http://www.canada-ils.com/" target="_about">www.canada-ils.com</a></li>
+				<li>For German citizens:<a href="http://www.vhs-germany.com/" target="_about">www.vhs-germany.com</a></li>
+			</ul>
+			<p>Apply personally at the Russian consulate<br>
+			Find your local consulate and go prepared with the set of required documents.</p>
+			<p>Please, note that there are no Russian Visa Centres in Australia. Australian citizens can find information about visas on the website of the Russian Consulate: <a href="https://www.sydneyrussianconsulate.com/en/visa-section/tourist-visa.html" target="_about">https://www.sydneyrussianconsulate.com/en/visa-section/tourist-visa.html</a></p>
+			<p>Generally, you will need a letter of invitation, which details your accommodation and the cities you are planning to visit. If you are specifically asked to provide a letter of invitation or have any other questions concerning visas, contact Mauri by email: <a href="">tau@ mauri-group.ru</a></p>
+		</div>
+	</section>
+	<section class="arrival--departure  clearfix">
+		<div class="container-inline">
+			<h2>Arrival & Departure</h2>
+			<h3>Please note that your departure transfers have also been arranged, so once you touchdown in Moscow all you have to do is relax and enjoy what is going to be anamazing journey.</h3>
+			<div class="arrival--departure__text">
+				<p class="first--letter">There are three main primary commercial airports serving Moscow and one in Saint-Petersburg:</p>
+				<ul>
+					<li>Sheremetyevo International Airport (SVO)</li>
+					<li>Domodedovo International Airport (DME)</li>
+					<li>Vnukovo International Airport (VKO)</li>
+				</ul>
+				<p>There is one main primary commercial airport serving Saint-Petersburg:</p>
+				<ul>
+					<li>Pulkovo International Airport (LED)</li>
+				</ul>
+			</div>
+			<div class="arrival--departure__text">
+				<p>We will be there to greet you at your arrival at the airport, and will be holding a sign with your name on it at the arrivals gate (as your exit the baggage claim area). Then you will have a private car/bus to the hotel ready for check-in and a rest after your long journey.</p>
+				<p>In the unlikely occurrence that you do not see your guide upon arrival, please head straight to the closest airport information desk so that we can also find you there. Tour Leader’s contact numbers and hotel	addresses are also included within this document just in case.</p>
+			</div>
+		</div>
+	</section>
+	<section class="booking--steps container-inline" id="booking">
+		<h2>Booking steps</h2>
+		<h3>Mauri Russia Tour Leaders</h3>
+		<p class="booking--steps__head">Irina Pindurina: 007–967–225–30–57</p>
+		<a class="booking--steps__link" href="" target="_blank">irina@mauri-group.ru</a>
+		<div class="booking--steps__lists clearfix">
+			<div class="list">
+				<h4>1.</h4>
+				<p>Reservation: Consult with your Mauri travel consultant about making reservations</p>
+			</div>
+			<div class="list">
+				<h4>2.</h4>
+				<p>Deposit: A deposit of 20% of the total trip cost is required to secure a reservation</p>
+			</div>
+			<div class="list">
+				<h4>3.</h4>
+				<p>All other payments: The remaining balance of the payment will be due 30 days prior to departure</p>
+			</div>
+			<div class="list">
+				<h4>4.</h4>
+				<p>Payment Methods: You may pay by any of the following methods. Detailed payment information will appear on your Mauri invoice</p>
+			</div>
+		</div>
+		<div class="booking--steps__texts clearfix">
+			<div class="booking--steps__text">
+				<p class="first--letter">To book this journey, please contact Mauri Russia <a href="" target="_blank">tau@mauri-group.ru.</a></p>
+				<p>Alternatively, you may contact your personal Mauri Tour Leader Irina Pindurina <a href="" target="_blank">irina@mauri-group.ru</a></p>
+				<p>For questions to Tel Aviv University, please contact Anat Halevy, Director, Community Relations and Special Projects, Tel Aviv University at <a href="" target="_blank">anath@tauex.tau.ac.il</a></p>
+			</div>
+			<div class="booking--steps__text">
+				<p><b>NOTE:</b><br>Payer should cover the international bank transfer charge. Please INCLUDE INVOICE NO. When making payment and send band wire confirmation to Accounting at +007 967 225 3057 or email to <a href="" target="_blank">tau@mauri-group.ru</a></p>
+				<p><b>NOTE:</b><br>Once full payment has been made your guides will be confirmed and you will receive guide information. We will check your visa and prepare you for the trip.</p>
+			</div>
+		</div>
+	</section>
+	<section class="price" id="price">
+		<div class="container-inline">
+			<h2>Price Quote</h2>
+			<h3>Note that your price quote may vary according to the exact number of participants, chosen options and exchange rate.The number of each room category is limited.</h3>
+			<div class="price__blocks clearfix">
+				<div class="top--blocks clearfix">
+					<div class="block1 block--border">
+						<h4>I. Main tour</h4>
+						<p>Price quotes mentioned below are valid for a group of 50 people. If more or less participants join, your price quote may vary. Please, contact your Mauri Tour Leader <a href="" target="_blank">irina@mauri-group.ru</a> to calculate your individual quote. </p>
+						<p>Single occupancy — <b>€ 2 660,92</b></p>
+						<p>Double occupancy — <b>€ 2 197,82</b></p>
+					</div>
+					<div class="block1">
+						<h4>II. Pre-tour in St. Petersburg:</h4>
+						<p>Accommodation SNGL DELUXE room (breakfast included) — <b>€ 355,86 per night</b></p>
+						<p>Accommodation FOUR SEASONS room (breakfast included) — <b>€ 429,83 per night</b></p>
+						<p>Accommodation TERRACE KING room (breakfast included) — <b>€ 469,00 per night</b></p>
+						<p>Individual transfer from Pulkovo Airport to Four Seasons hotel — <b>€ 57,52</b></p>
+					</div>
+					<div class="block1">
+						<h4>III. Pre-tour in Moscow: </h4>
+						<p>Accommodation with single occupancy (breakfast included) — <b>€ 380,06 per night</b></p>
+						<p>Accommodation with double occupancy(breakfast included) — <b>€ 210,42 per night</b></p>
+						<p>Individual transfer from Sheremetevo /Domodedovo/Vnukovo Airport to Four Seasons hotel  — <b>€  103,18 per car</b></p>
+					</div>
+				</div>
+				<div class="middle--blocks clearfix">
+					<div class="invisible-block"></div>
+					<div class="block2">
+						<p>Price quotes mentioned below are valid for a group of 15 people and a full set of activities. If more or less participants join or if you choose your own set of options, your price quote may vary. Please, contact <a href="" target="_blank">irina@mauri-group.ru</a> to calculate your individual quote.</p>
+					</div>
+				</div>
+				<div class="bottom-blocks clearfix">
+					<div class="invisible-block"></div>	
+					<div class="block3">
+						<p>
+							Day 1 (September 20) — <b>€ 320,42</b><br>
+							Day 2 (September 21) - Suzdal option — <b>€ 425</b><br>
+							Moscow option with dinner at Pushkin — <b>€  631,41</b>
+						</p>
+						<p>*You can also choose a visit to the Sanduny Bath Rooms, the quote will be calculated individually. Please, contact <a href="" target="_blank">irina@mauri-group.ru</a></p>
+					</div>
+					<div class="block3">
+						<p>
+							Day 1 (September 17) — <b>€ 405,00</b><br>
+							Day 2 (September 18)— <b>€ 453,64</b><br>
+							Day 3 (September 19) — <b>€ 572,37</b><br>
+							Day 4 (September 20) — <b>€ 435,08</b>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="terms container-inline">
+		<h2>Terms of Payment</h2>
+		<h3>Deposit and Payment</h3>
+		<p class="first--letter">A deposit of 20% of the total trip cost is required to secure a reservation (by July 15th 2016). The remaining balance of the payment will be due 30 days prior to departure (by August 18th 2016). In the case of trip cancellation, please refer to the schedule below:</p>
+		<ul>
+			<li>31 days or more prior to trip departure — Loss of deposit</li>
+			<li>Between 20–31 days prior to trip departure — 25% of total tour price will be forfeited</li>
+			<li>Between 15–20 days prior to trip departure — 50% of total tour price will be forfeited</li>
+			<li>Less than 14 days prior to trip departure — no refund</li>
+			<li>The prices listed are based on the costs and exchange rates current at the time of inquiry.</li>
+			<li>Mauri reserves the right to adjust rates without prior notice</li>
+		</ul>
+	</section>
+	<section class="payment--contacts clearfix" id="payments">
+		<div class="container-inline">
+			<h2>Payment & Contact Details</h2>
+			<div class="payment--contacts__blocks">
+				<div class="payment--contacts__block">
+					<div class="inline--block">
+						<h3>LLC Mauri</h3>
+						<p><b>Address:</b> 107031, Moscow,Kuznetsky most St., d. 3, p. 2<br>
+						INN7707344224 CRR770701001<br>
+						PSRN1157746560850</p>
+					</div>
+					<div class="inline--block">
+						<h3>Mauri Russia Tour Leaders</h3>
+						<p><b>Irina Pindurina</b><br>
+						007-967-225-30-57 <br>
+						<a href="" target="_blank">irina@mauri-group.ru</a><br>
+						<a href="" target="_blank">tau@mauri-group.ru</a></p>
+					</div>
+					<div class="inline--block">
+						<h3>Tel Aviv University</h3>
+						<p><b>Anat Halevy</b><br>
+						007-967-225-30-57 <br>
+						<span>Director, Community Relations and Special Projects </span><br>
+						<a href="" target="_blank">anath@tauex.tau.ac.il </a></p>
+					</div>
+				</div>
+				<div class="payment--contacts__block">
+					<div class="inline--block">
+						<h3>Direct EUR wire transfer</h3>
+						<p>
+							Beneficiary account (EUR): 40702978300000124056<br>
+							Beneficiary Bank: “Khanty-Mansiysk bank Otkritie” (PJSC)<br>
+							SWIFT code: RUDLRUMM<br>
+							Correspondent Bank: Deutsche Bank AG<br>
+							SWIFT code of correspondent Bank: DEUTDEFF<br>
+							National Bank code: BLZ 50070010<br>
+							Correspondent account number: 100 9477134 000
+						</p>
+					</div>
+					<div class="inline--block">
+						<h3>Direct USD wire transfer</h3>
+						<p>
+							Beneficiary account (USD): 40702840700000124056<br>
+							Beneficiary Bank: "Khanty-Mansiysk bank Otkritie" (PJSC)<br> 
+							SWIFT code: RUDLRUMM<br>
+							Correspondent Bank: Deutsche Bank Trust Company Americas<br>
+							SWIFT code of correspondent Bank: BKTRUS33<br>
+							National Bank code: ABA 021001033<br>
+							Correspondent account number: 04422163<br>
+							Direct USD wire transfer
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-inline cleafix">
+			<p>2016. Mauri Group. All Rights Reserveds</p>
+			<p class="baodigital">Powered by <a href="http://baodigital.com/" target="_blank">BAO DIGITAL</a></p>
+		</div>		
+	</footer>
+
+
+
+	<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
